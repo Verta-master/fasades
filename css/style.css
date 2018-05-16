@@ -797,6 +797,7 @@ a.header__link:active {
 .features {
   padding-top: 80px;
   padding-bottom: 85px;
+  color: #363f48;
   background-color: #f4f3f3;
 }
 .features__list {
@@ -824,4 +825,108 @@ a.header__link:active {
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.05em;
+}
+.info {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.info__slider {
+  width: 100%;
+  margin-top: 70px;
+}
+.info__slide {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.info__text {
+  width: 50%;
+  padding-right: 35px;
+}
+.info__text span {
+  color: #363f48;
+}
+.info__title {
+  color: #abc261;
+  font-weight: 500;
+  font-size: 24px;
+}
+.info__btn {
+  margin-left: auto;
+}
+.info__pagination {
+  text-align: left;
+  margin-left: 50px;
+  bottom: 20px;
+  max-width: 130px;
+}
+.info__pagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  color: #abc261;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+.info__pagination .swiper-pagination-bullet-active {
+  background-color: #f4f3f3;
+}
+.info__next,
+.info__prev {
+  width: 20px;
+  height: 30px;
+  bottom: 10px;
+  top: auto;
+  background-image: url(../img/icon-next.png);
+  background-size: 19px 13px;
+  background-position: center;
+  outline: none;
+}
+.info__prev {
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.info__next {
+  left: 190px;
+  right: auto;
+}
+.btn {
+  width: 205px;
+  height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 11px;
+  color: #abc261;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #abc261;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.btn:hover,
+.btn:active {
+  color: #363f48;
+  background-color: #abc261;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
