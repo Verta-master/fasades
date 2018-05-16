@@ -1,0 +1,32 @@
+.social {
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  li {
+    margin-left: 3px;
+    margin-right: 4px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 41px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: @dark;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: @green;
+  border: 1px solid @green;
+  transition: ease-out 0.3s;
+  
+  &:hover,
+  &:active {
+    background-color: rgba(255,255,255,0);
+    transition: ease-out 0.3s;
+  }
+}
