@@ -78,13 +78,33 @@
   
   <main>
     <section class="promo">
-      <div class="wrapper promo__wrap">
-        <h1>Мебельные материалы для производства мебели</h1>
-        <p>Мебельные фасады - собственное производство Лучшее предложение в России!!!</p>
-        <div class="promo__btns">
-          <a href="#" class="promo__link" download>ПОЛУЧИТЬ ПРАЙС-ЛИСТ</a>
-          <a href="#" class="promo__link">рассчитать стоимость</a>
-        </div>
+      <div class="swiper-container promo__slider">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide promo__slide">
+            <img src="img/slide-1.jpg" alt="Мебельные материалы для производства мебели" width="1920" height="908">
+            <div class="promo__text">
+              <p class="promo__title">Мебельные материалы для производства мебели</p>
+              <p>Мебельные фасады - собственное производство Лучшее предложение в России!!!</p>
+              <div class="promo__btns">
+                <a href="#" class="promo__link" download>ПОЛУЧИТЬ ПРАЙС-ЛИСТ</a>
+                <a href="#" class="promo__link">рассчитать стоимость</a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide promo__slide">
+            <img src="img/slide-1.jpg" alt="Мебельные материалы для производства мебели" width="1920" height="908">
+            <div class="promo__text">
+              <p class="promo__title">Мебельные материалы для производства мебели</p>
+              <p>Мебельные фасады - собственное производство Лучшее предложение в России!!!</p>
+              <div class="promo__btns">
+                <a href="#" class="promo__link" download>ПОЛУЧИТЬ ПРАЙС-ЛИСТ</a>
+                <a href="#" class="promo__link">рассчитать стоимость</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-button-prev promo__prev"></div>
+        <div class="swiper-button-next promo__next"></div>
       </div>
     </section>
     
@@ -131,8 +151,8 @@
           </li>
         </ul>
         <div class="swiper-pagination info__pagination"></div>
-        <div class="swiper-button-prev info__prev"></div>
-        <div class="swiper-button-next info__next"></div>
+        <div class="swiper-button-prev info__prev"><i class="fas fa-arrow-left"></i></div>
+        <div class="swiper-button-next info__next"><i class="fas fa-arrow-right"></i></div>
       </div>
     </section>
     
@@ -276,6 +296,16 @@
       navigation: {
         nextEl: '.info__next',
         prevEl: '.info__prev',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+    });
+    
+    var mySwiper = new Swiper ('.promo__slider', {
+      navigation: {
+        nextEl: '.promo__next',
+        prevEl: '.promo__prev',
       },
       simulateTouch: false,
       preventClicks: false,
