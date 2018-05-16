@@ -37,6 +37,10 @@
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
+  
+  &--active {
+    color: @green;
+  }
 }
 
 .menu__subbtn {
@@ -68,7 +72,8 @@
   transition: ease-out 0.3s;
   
   &:hover,
-  &:active {
+  &:active,
+  &--active {
     color: @green;
     transition: ease-out 0.3s;
   }
