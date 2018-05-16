@@ -1,66 +1,34 @@
 //Mobile menu
-$('.menu__btn').click(function() {
+$('.menu__btn').click(function(e) {
+  e.stopPropagation();
   $('.menu').toggleClass('menu--opened');
   $('.menu__list').slideToggle();
 })
 
-if (window.innerWidth < 766) {
-  $('.menu__link').click(function() {
-    $('.menu__list').slideToggle();
+$('.menu__subbtn').click(function(e) {
+  e.stopPropagation();
+  $(this).next().slideToggle();
+  $(this).toggleClass('menu__subbtn--up');
+})
+
+$('.search__btn').click(function(e) {
+  e.stopPropagation();
+  $('.search__form').slideToggle();
+})
+
+//Hide popups on escape and click outside
+if (window.innerWidth < 1200) {
+  $("body").click(function(){
+    $('.menu__list').slideUp();
     $('.menu').removeClass('menu--opened');
+    $('.search__form').slideUp();
   })
-}
 
-//Scroll to top
-$(window).scroll(function(){
-  if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
-    $(".btn-top").fadeIn();
-  } else {
-    $(".btn-top").fadeOut();
-  };
-});
-
-$(".btn-top").click(function () {
-  $("body,html").animate({
-    scrollTop: 0
-  }, 400);
-  return false;
-});
-
-//Scroll to menu anchor
-$(document).ready(function () {
-  $(document).on("scroll", onScroll);
-
-  //smoothscroll
-  $('.menu__item a[href^="#"]').on('click', function (e) {
-    e.preventDefault();
-    $(document).off("scroll");
-
-    $('.menu__item a').each(function () {
-        $(this).removeClass('menu__link--active');
-    })
-    $(this).addClass('menu__link--active');
-
-    var target = this.hash,
-        menu = target;
-    $target = $(target);
-    $('html, body').stop().animate({
-        'scrollTop': $target.offset().top
-    }, 500, 'swing', function () {
-        $(document).on("scroll", onScroll);
-    });
-  });
-});
-
-function onScroll(event){
-  var scrollPos = $(document).scrollTop();
-  $('.menu__link').each(function () {
-      event.preventDefault();
-      var currLink = $(this);
-      var refElement = $(currLink.attr("href"));
-      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-          $('.menu__link').removeClass("menu__link--active");
-          currLink.addClass("menu__link--active");
-      }
-  });
+  $("body").keydown(function(e) {
+    if (e.keyCode == 27) {
+      $('.menu__list').slideUp();
+      $('.menu').removeClass('menu--opened');
+      $('.search__form').slideUp();
+    }
+  })
 }
