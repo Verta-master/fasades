@@ -496,6 +496,8 @@ h2 {
   margin-right: auto;
 }
 .header__top {
+  position: relative;
+  z-index: 100;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #363f48;
@@ -698,6 +700,9 @@ a.header__link:active {
   background-color: #abc261;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.promo {
+  margin-top: -140px;
 }
 .promo__slider {
   width: 100%;
@@ -1218,10 +1223,17 @@ a.header__link:active {
   .catalog__overlay {
     font-size: 30px;
   }
+  .promo__text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media (max-width: 1200px) {
   .wrapper {
     width: 100%;
+  }
+  .promo {
+    margin-top: 0;
   }
   .header__top .header__wrap {
     padding-left: 15px;
