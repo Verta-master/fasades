@@ -1,0 +1,20 @@
+.btn {
+  width: 205px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: @green;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid @green;
+  transition: ease-out 0.3s;
+  
+  &:hover,
+  &:active {
+    color: @dark;
+    background-color: @green;
+    transition: ease-out 0.3s;
+  }
+}

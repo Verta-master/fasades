@@ -149,10 +149,28 @@
             </div>
             <img src="img/img-1.jpg" alt="Акриловые фасады" width="527" height="289">
           </li>
+          <li class="swiper-slide info__slide">
+            <div class="info__text">
+              <p class="info__title">Акриловые фасады</p>
+              <span>От 4900 руб. за м2</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis dui, molestie nec lorem at, rutrum hendrerit lectus. Morbi in scelerisque nibh. Sed lobortis libero sed dui tempor, semper condimentum sapien efficitur. Nullam accumsan purus ipsum, lobortis elementum ipsum</p>
+              <a href="#" class="btn info__btn">подробнее</a>
+            </div>
+            <img src="img/img-1.jpg" alt="Акриловые фасады" width="527" height="289">
+          </li>
+          <li class="swiper-slide info__slide">
+            <div class="info__text">
+              <p class="info__title">Акриловые фасады</p>
+              <span>От 4900 руб. за м2</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis dui, molestie nec lorem at, rutrum hendrerit lectus. Morbi in scelerisque nibh. Sed lobortis libero sed dui tempor, semper condimentum sapien efficitur. Nullam accumsan purus ipsum, lobortis elementum ipsum</p>
+              <a href="#" class="btn info__btn">подробнее</a>
+            </div>
+            <img src="img/img-1.jpg" alt="Акриловые фасады" width="527" height="289">
+          </li>
         </ul>
         <div class="swiper-pagination info__pagination"></div>
-        <div class="swiper-button-prev info__prev"><i class="fas fa-arrow-left"></i></div>
-        <div class="swiper-button-next info__next"><i class="fas fa-arrow-right"></i></div>
+        <div class="swiper-button-prev info__prev"></div>
+        <div class="swiper-button-next info__next"></div>
       </div>
     </section>
     
@@ -292,6 +310,9 @@
       pagination: {
         el: '.info__pagination',
         clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
       },
       navigation: {
         nextEl: '.info__next',
