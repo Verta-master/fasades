@@ -5,6 +5,7 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Fasades</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -143,7 +144,7 @@
           </div>
           <div class="article__info">
             <p class="article__price">5300 руб./ м<sup>2</sup></p>
-            <a href="#" class="btn article__btn">заказать</a>
+            <a data-fancybox data-src="#call" href="javascript:;" class="btn article__btn">заказать</a>
             <p class="article__articul">Артикул товара: 32459 Lsdfsd</p>
             <p class="article__comment">В наличии: <span>есть в наличии</span></p>
             <a href="#" class="article__link article__link--delivery">Доставка</a>
@@ -202,7 +203,22 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title">Oставить заявку</p>
+    <form action="#" method="post" class="order">
+      <input type="text" name="name" class="order__input" placeholder="Ваше имя*" required>
+      <input type="tel" name="phone" class="order__input" placeholder="Ваш телефон*" required>
+      <input type="email" name="email" class="order__input" placeholder="Ваш Email">
+      <input type="checkbox" name="check" id="modal__check" class="order__check" required>
+      <label for="modal__check" class="order__label">Я не робот<span>*</span></label>
+      <span class="order__comment"><i class="fas fa-info-circle"></i>  Отправляя форму, я даю согласие на <a href="#">обработку персональных данных</a></span>
+      <button type="submit" class="btn order__btn">Отправить</button>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
 </body>
 </html>

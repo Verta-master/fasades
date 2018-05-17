@@ -1623,6 +1623,121 @@ a.header__link:active {
   height: 2px;
   background-color: #d0cfcf;
 }
+.modal {
+  max-width: 450px;
+}
+.modal .title {
+  margin-top: 0;
+  color: #abc261;
+}
+.order__input,
+.order__text {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px 13px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #363f48;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.order__input::-webkit-input-placeholder,
+.order__text::-webkit-input-placeholder {
+  opacity: 1;
+}
+.order__input:-ms-input-placeholder,
+.order__text:-ms-input-placeholder {
+  opacity: 1;
+}
+.order__input::-ms-input-placeholder,
+.order__text::-ms-input-placeholder {
+  opacity: 1;
+}
+.order__input::placeholder,
+.order__text::placeholder {
+  opacity: 1;
+}
+.order__input:hover,
+.order__text:hover,
+.order__input:focus,
+.order__text:focus {
+  border-color: #abc261;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.order__input {
+  height: 37px;
+}
+.order__text {
+  height: 82px;
+  min-height: 82px;
+  outline: none;
+}
+.order__check {
+  display: none;
+}
+.order__label {
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.order__label span {
+  color: red;
+}
+.order__label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.order__label::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: 15px;
+  height: 10px;
+  border-left: 1px solid #abc261;
+  border-bottom: 1px solid #abc261;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.order__check:checked + .order__label:after {
+  display: block;
+}
+.order__comment {
+  padding-right: 30px;
+  font-size: 11px;
+  color: #aaa;
+  line-height: 17.6px;
+}
+.order__comment a {
+  color: #111;
+  text-decoration: underline;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.order__comment a:hover,
+.order__comment a:active {
+  color: #aaa;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.order__btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: 16px;
+}
 @media (max-width: 1400px) {
   .catalog__overlay {
     font-size: 30px;
