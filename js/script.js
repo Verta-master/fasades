@@ -32,3 +32,15 @@ if (window.innerWidth < 1200) {
     }
   })
 }
+
+//Sidebar
+$('.sidebar__btn').click(function(e) {
+  e.stopPropagation();
+  $(this).next().slideToggle();
+})
+
+if (window.innerWidth < 1022) {
+  $('.sidebar__title').click(function() {
+    $('.sidebar__list').slideToggle();
+  })
+}
